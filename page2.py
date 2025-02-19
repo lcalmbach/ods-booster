@@ -1,45 +1,4 @@
 import streamlit as st
-
-"""
-This script is a Streamlit application for managing and downloading datasets from ODS (Open Data Service).
-It provides a user interface for selecting datasets, viewing metadata, and downloading selected datasets.
-
-Modules:
-    - streamlit as st: Streamlit library for creating web applications.
-    - pandas as pd: Pandas library for data manipulation and analysis.
-    - ods: Custom module for interacting with ODS.
-    - texts: Custom module containing text strings for the application.
-    - time: Standard library for time-related functions.
-
-Functions:
-    - ods.get_merged_datasets(): Retrieves a DataFrame of merged datasets from ODS.
-    - ods.select_files(): Allows users to select files from the merged datasets DataFrame.
-    - ods.load_config(): Loads the configuration/log file.
-    - ods.save_config(): Saves the configuration/log file.
-    - ods.get_ods_table(): Retrieves a table from ODS based on the dataset identifier.
-
-Configuration:
-    - column_configuration: Dictionary defining the configuration for displaying dataset columns in the UI.
-
-UI Elements:
-    - st.title: Displays the main title of the application.
-    - st.expander: Creates expandable sections for additional information.
-    - st.markdown: Displays markdown text.
-    - st.button: Creates a button for user interaction.
-    - st.spinner: Displays a spinner while performing an action.
-    - st.success: Displays a success message.
-    - st.rerun: Reruns the Streamlit script.
-
-Workflow:
-    1. Retrieve merged datasets from ODS.
-    2. Display the title and information section.
-    3. Allow users to select datasets from the merged datasets DataFrame.
-    4. Display metadata for the selected dataset if only one dataset is selected.
-    5. Download selected datasets when the download button is clicked.
-    6. Update the local metadata and configuration/log file.
-    7. Display a success message and rerun the script.
-"""
-import pandas as pd
 import ods
 from texts import txt
 import time

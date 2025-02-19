@@ -1,33 +1,4 @@
 import streamlit as st
-
-"""
-This script is a Streamlit application that interacts with Snowflake tables and displays metadata.
-
-Functions:
-- ods.get_snowflake_tables(): Retrieves a DataFrame containing information about Snowflake tables.
-- ods.select_files(df_files, multi_row=False, column_configuration=column_configuration): Allows the user to select files from the DataFrame.
-- ods.run_snowflake_query(sql_query): Executes a SQL query on Snowflake and returns the result as a DataFrame.
-
-Streamlit Components:
-- st.markdown: Displays markdown text.
-- st.column_config.TextColumn: Configures the columns for displaying table information.
-- st.text_area: Provides a text area for SQL query input.
-- st.button: Creates a button to run the SQL query.
-- st.expander: Creates an expandable section for displaying metadata.
-- st.dataframe: Displays a DataFrame in a tabular format.
-
-Variables:
-- column_configuration: Dictionary defining the configuration for table columns.
-- df_files: DataFrame containing information about Snowflake tables.
-- selected_rows: Dictionary containing the selected rows from the DataFrame.
-- rowid: Index of the selected row.
-- identifier: ODS identifier of the selected table.
-- selected_table: Name of the selected table.
-- ds: Metadata of the selected dataset.
-- sql_query: SQL query input by the user.
-- df: DataFrame containing the result of the executed SQL query.
-"""
-import pandas as pd
 import ods
 
 column_configuration = {

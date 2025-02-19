@@ -1,38 +1,5 @@
 import streamlit as st
 
-"""
-This script is a Streamlit application that allows users to view and upload parquet files to Snowflake Storage.
-
-Modules:
-    - streamlit as st: Streamlit library for creating web applications.
-    - pandas as pd: Pandas library for data manipulation and analysis.
-    - ods: Custom module for ODS-related operations.
-
-Column Configuration:
-    - file_path: Text column for displaying the parquet file name.
-    - identifier: Text column for displaying the ODS identifier.
-    - title: Text column for displaying the ODS title.
-    - modified: Text column for displaying the last update timestamp on ODS.
-
-Sidebar:
-    - Search: Text input for filtering the displayed files.
-
-Main:
-    - file_list: List of all parquet files in the data folder.
-    - files_df: DataFrame containing file information and extended columns from ODS.
-    - selected_rows: DataFrame displaying the files with the specified column configuration.
-    - Upload Files to Snowflake: Button to upload selected files to Snowflake Storage.
-
-Functions:
-    - ods.extend_columns: Extends the DataFrame with additional columns based on the identifier.
-    - ods.upload_to_snowflake_storage: Uploads a file to Snowflake Storage.
-
-Usage:
-    - Run the script in a Streamlit environment.
-    - Use the sidebar to filter files.
-    - Select files from the displayed DataFrame.
-    - Click the "Upload Files to Snowflake" button to upload selected files.
-"""
 import pandas as pd
 import ods
 

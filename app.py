@@ -1,24 +1,5 @@
 import streamlit as st
 
-"""
-This application is built using Streamlit and provides various functionalities related to ODS datasets.
-It includes pages for downloading datasets, uploading files to Azure and Snowflake, and querying data from Snowflake.
-
-Attributes:
-    __version__ (str): The version of the application.
-    __author__ (str): The author of the application.
-    __author_email__ (str): The email of the author.
-    VERSION_DATE (str): The release date of the current version.
-    APP_NAME (str): The name of the application.
-    APP_EMOJI (str): The emoji representing the application.
-    GIT_REPO (str): The URL of the GitHub repository.
-    SOURCE_URL (str): The URL of the data source.
-    APP_INFO (str): HTML formatted string containing application information.
-
-Functions:
-    init(): Initializes the Streamlit application with the specified configuration and styles.
-"""
-
 __version__ = "0.0.1"
 __author__ = "Lukas Calmbach"
 __author_email__ = "lcalmbach@gmail.com"

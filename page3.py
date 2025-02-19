@@ -1,37 +1,4 @@
 import streamlit as st
-
-"""
-This script uses Streamlit to create a web interface for managing and uploading parquet files to Azure Storage.
-
-Modules:
-    - streamlit as st: Streamlit library for creating web applications.
-    - pandas as pd: Pandas library for data manipulation and analysis.
-    - ods: Custom module for ODS-related operations.
-
-Functions:
-    - ods.data_folder.glob: Retrieves a list of parquet files from the data folder.
-    - ods.extend_columns: Extends the DataFrame with additional columns based on the identifier.
-    - ods.upload_to_azure_storage: Uploads a file to Azure Storage.
-
-Column Configuration:
-    - file_path: Text column for displaying the parquet file name.
-    - identifier: Text column for displaying the ODS identifier.
-    - title: Text column for displaying the title associated with the ODS identifier.
-    - modified: Text column for displaying the last update timestamp on ODS.
-
-Streamlit Components:
-    - st.subheader: Displays the number of local files found.
-    - st.dataframe: Displays the DataFrame with the specified column configuration and allows multi-row selection.
-    - st.button: Button to trigger the upload of selected files to Azure Storage.
-    - st.spinner: Displays a spinner while uploading files.
-    - st.success: Displays a success message after files are uploaded.
-
-Usage:
-    - The script lists all parquet files in the specified data folder.
-    - It extracts the identifier from the file path and extends the DataFrame with additional columns.
-    - The user can select multiple files from the displayed DataFrame.
-    - Upon clicking the "Upload Files to Azure Storage" button, the selected files are uploaded to Azure Storage.
-"""
 import pandas as pd
 import ods
 
