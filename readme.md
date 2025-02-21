@@ -1,10 +1,6 @@
-Here's the enhanced and corrected version of your README with improved clarity, grammar, and structure while keeping the markdown format intact:  
+H# 📖 Overview  
 
----
-
-# 📖 Overview  
-
-[OpenDataSoft (ODS)](https://opendatasoft.com) is an **Infrastructure-as-a-Service (IaaS)** platform widely used by the Open Data community for storing and publishing datasets. While ODS provides a **REST API** for direct data access, performance issues can arise for large datasets. In such cases, datasets need to be replicated to a more performant storage solution, either **locally** or in a **cloud database**.  
+[OpenDataSoft (ODS)](https://opendatasoft.com) is an **Infrastructure-as-a-Service (IaaS)** platform widely used by the Open Data community for storing and publishing datasets. While ODS provides a **REST API** for direct data access, performance issues can arise for large datasets. In such cases, datasets need to be replicated to a more performant storage solution, either **locally** or in a **cloud database**. 
 
 ### ⚡ What is ODS-Booster?  
 **ODS-Booster** is a demonstration application that showcases multiple strategies for caching ODS datasets to enhance data access performance. It supports storing ODS datasets in:  
@@ -12,12 +8,12 @@ Here's the enhanced and corrected version of your README with improved clarity, 
 - **Azure Blob Storage**  
 - **Snowflake** as a database table  
 
-This application demonstrates **data synchronization techniques** with various storage types. **It must be adapted** if you are working with different data sources (ODS) or target storage solutions (Azure, Snowflake, etc.).  
+This application demonstrates **data synchronization techniques** with various storage types. **It must be adapted** if you are working with different data sources (ODS) or target storage solutions (Azure, Snowflake, etc.). 
 
 ### 🌍 Try the Demo  
-You can test the application at **[ODS-Booster Streamlit App](https://ods-booster.streamlit.app/)**.  
+You can test the application at **[ODS-Booster Streamlit App](https://ods-booster.streamlit.app/)**. 
 
-💡 **Note:** The demo runs on a **free Streamlit account** with **limited memory and disk space**. It primarily demonstrates how data can be transferred and synchronized across different storage solutions.  
+💡 **Note:** The demo runs on a **free Streamlit account** with **limited memory and disk space**. It primarily demonstrates how data can be transferred and synchronized across different storage solutions. The size of datasets that can be downloaded and transferred is limited to 5MB.  
 
 ### 🏗️ Practical Considerations  
 - If you plan to **run ETL tasks** on your own data, **cloud resources** are needed based on the dataset size.  

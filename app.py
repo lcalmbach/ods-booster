@@ -1,9 +1,9 @@
 import streamlit as st
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 __author__ = "Lukas Calmbach"
 __author_email__ = "lcalmbach@gmail.com"
-VERSION_DATE = "2024-12-09"
+VERSION_DATE = "2025-02-25"
 APP_NAME = "ODS Booster"
 APP_EMOJI = "🚀"
 GIT_REPO = "https://github.com/lcalmbach/ods-wizard"
@@ -51,9 +51,9 @@ menu = [
     st.Page("page2.py", title="📥 Download ODS datasets"),
     st.Page("page3.py", title="📤☁️ Upload parquet files to Azure"),
     st.Page("page4.py", title="📤❄️ Upload parquet files to Snowflake"),
-    st.Page("page5.py", title="☁️📥 Load remote data from Azure"),
-    st.Page("page6.py", title="❄️📥 Query Snowflake data"),
-    st.Page("page7.py", title="🖥️👀 Query local data"),
+    st.Page("page5.py", title="📥☁️ Load remote data from Azure"),
+    st.Page("page6.py", title="🔎❄️ Query Snowflake data"),
+    st.Page("page7.py", title="🔎🖥️ Query local data"),
 ]
 
 init()
