@@ -1,5 +1,5 @@
 txt = {
-    "info": """# ODS Booster
+    "info": """# 🚀ODS Booster
 ### **Fast ODS Data Caching Application**
 
 #### **Overview**
@@ -30,7 +30,13 @@ Ideal for **small to medium datasets** that need repeated access without queryin
 
 📌 **Use Case:**  
 Best for **medium-sized datasets** that need cloud accessibility while keeping costs low.
+*, **Snowflake** provides **powerful SQL-based querying**, but costs include **compute time**.  
 
+---
+
+## **🚀 Why Use This App?**
+✅ **Eliminates slow direct access to ODS for large datasets**  
+✅ **Provides multiple storag
 ---
 
 ### **3️⃣ Upload Parquet Files to Snowflake**
@@ -87,6 +93,29 @@ Essential for **very large datasets**, where downloading them entirely is **too 
 
 This application is **ideal for organizations and developers** working with **data.bs.ch** datasets who need **fast, cost-efficient access** to large OGD datasets. 🚀
     """,
-    "title_download_ods": "Download ODS Data",
-    "info_download_ods": "Seletct files to be downloaded from the ODS repository an saved to the local disk, then click the download button.",
+    "title_page2": "Download ODS datasets",
+    "info_page2": """Select the files you want to download from the ODS repository and save them to your local disk. Then, click the Download button to start the process.
+
+If a file has already been saved locally, you will see entries in the columns "Records (Local)" and "Uploaded". To check if the dataset is up to date, compare the following columns:
+
+- "Modified": The last modified date of the dataset in the ODS repository.  
+- "Uploaded": The timestamp indicating when the dataset was last downloaded and saved locally as a Parquet file.  
+
+If the "Modified" and "Uploaded" timestamps are identical, the dataset is already synchronized. If they differ, consider downloading the latest version to keep your local copy up to date.""",
+
+    "title_page3": "Upload local parqet files to Azure",
+    "info_page3": """The list below shows all Parquet files stored locally. Select the files you want to upload to Azure Blob Storage and click the Upload button to start the process.""",
+
+"title_page4": "Upload local parqet files to Snowflake",
+    "info_page4": """The list below shows all Parquet files stored locally. Select the files you want to upload to Azure Blob Storage and click the Upload button to start the process.""",
+
+"title_page5": "Load remote data from Azure",
+    "info_page5": """The list below shows all Parquet files stored in Azure Blob Storage. Select the files you want to download and click the Download button to start the process.""",
+
+"title_page6": "Query Snowflake data",
+    "info_page6": """Select the Snowflake-stored dataset you want to query. Enter an SQL query in the text area and click the Run SQL Data button to execute the query. The results will be displayed below.""",
+
+"title_page7": "Preview local parqet files",
+    "info_page7": """The list below shows all Parquet files stored locally. Select the files you want to preview and click the Preview button to display the data in a table.""",
+
 }

@@ -5,7 +5,7 @@ __author__ = "Lukas Calmbach"
 __author_email__ = "lcalmbach@gmail.com"
 VERSION_DATE = "2024-12-09"
 APP_NAME = "ODS Booster"
-APP_EMOJI = "🪄"
+APP_EMOJI = "🚀"
 GIT_REPO = "https://github.com/lcalmbach/ods-wizard"
 SOURCE_URL = "https://data.bs.ch/"
 
@@ -47,12 +47,13 @@ def init():
 
 
 menu = [
-    st.Page("page1.py", title="About this app"),
-    st.Page("page2.py", title="Download ODS datasets"),
-    st.Page("page3.py", title="Upload parquet files to Azure"),
-    st.Page("page4.py", title="Upload parquet files to Snowflake"),
-    st.Page("page5.py", title="Load remote data from Azure"),
-    st.Page("page6.py", title="Query Snowflake data"),
+    st.Page("page1.py", title="🏠 About this app"),
+    st.Page("page2.py", title="📥 Download ODS datasets"),
+    st.Page("page3.py", title="📤☁️ Upload parquet files to Azure"),
+    st.Page("page4.py", title="📤❄️ Upload parquet files to Snowflake"),
+    st.Page("page5.py", title="☁️📥 Load remote data from Azure"),
+    st.Page("page6.py", title="❄️📥 Query Snowflake data"),
+    st.Page("page7.py", title="🖥️👀 Query local data"),
 ]
 
 init()

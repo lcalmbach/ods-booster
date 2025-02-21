@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import ods
+from utils import show_header, show_records
+from texts import txt
 
 
 column_configuration = {
@@ -30,7 +32,11 @@ files_df = ods.extend_columns(
     files_df, identifier="identifier", columns=["title", "modified"]
 )
 
-st.subheader(f"{len(files_df)} local files")
+show_header(
+    title=txt["title_page3"],
+    help_text=txt["info_page3"],
+)
+show_records('{} local parquet files', len(files_df))
 selected_rows = st.dataframe(
     files_df[column_configuration.keys()],
     column_config=column_configuration,

@@ -1,5 +1,7 @@
 import streamlit as st
 import ods
+from texts import txt
+from utils import show_header, show_records
 
 column_configuration = {
     "table_name": st.column_config.TextColumn(
@@ -12,7 +14,11 @@ column_configuration = {
 
 df_files = ods.get_snowflake_tables()
 
-st.markdown(f"**{len(df_files)} data files found in the Azure Storage**")
+show_header(
+    title=txt["title_page6"],
+    help_text=txt["info_page6"],
+)
+show_records("{} Snowflake tables", len(df_files))
 selected_rows = ods.select_files(
     df_files, multi_row=False, column_configuration=column_configuration
 )

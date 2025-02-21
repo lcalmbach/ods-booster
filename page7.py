@@ -1,9 +1,9 @@
 import streamlit as st
-
 import pandas as pd
 import ods
+from utils import show_header, show_records
 from texts import txt
-from utils import show_header,show_records
+
 
 column_configuration = {
     "file_path": st.column_config.TextColumn(
@@ -23,7 +23,7 @@ column_configuration = {
     ),
 }
 
-filter = st.sidebar.text_input("Search", "")
+
 file_list = list(ods.data_folder.glob("*.parquet"))  # Get all files
 files_df = pd.DataFrame(file_list, columns=["file_path"])
 files_df["file_path"] = files_df["file_path"].astype(str)
@@ -33,8 +33,8 @@ files_df = ods.extend_columns(
 )
 
 show_header(
-    title=txt["title_page4"],
-    help_text=txt["info_page4"],
+    title=txt["title_page7"],
+    help_text=txt["info_page7"],
 )
 show_records('{} local parquet files', len(files_df))
 selected_rows = st.dataframe(
@@ -43,14 +43,13 @@ selected_rows = st.dataframe(
     use_container_width=True,
     hide_index=True,
     on_select="rerun",
-    selection_mode="multi-row",
+    selection_mode="single-row",
 )
 # st.write(selected_rows)
-if st.button("Upload Files to Snowflake"):
-    index = 0
-    for item in selected_rows["selection"]["rows"]:
-        file_path = files_df.iloc[item]["file_path"]
-        with st.spinner(f"Uploading {file_path}..."):
-            ods.upload_to_snowflake_storage(file_path)
-        index += 1
-    st.success(f"{index} files uploaded to Snowflake Storage!")
+if st.button("Preview"):
+    row = selected_rows["selection"]["rows"][0]
+    file_path = files_df.iloc[row]["file_path"]
+    df = pd.read_parquet(file_path)
+    st.write(f"{files_df.iloc[row]['title']} ({len(df)} records)")
+    st.dataframe(df.head(5000))
+    
