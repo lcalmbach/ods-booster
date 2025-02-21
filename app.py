@@ -6,7 +6,7 @@ __author_email__ = "lcalmbach@gmail.com"
 VERSION_DATE = "2025-02-25"
 APP_NAME = "ODS Booster"
 APP_EMOJI = "🚀"
-GIT_REPO = "https://github.com/lcalmbach/ods-wizard"
+GIT_REPO = "https://github.com/lcalmbach/ods-booster"
 SOURCE_URL = "https://data.bs.ch/"
 
 APP_INFO = f"""<div style="background-color:silver; padding: 10px;border-radius: 15px; border:solid 1px white;">
