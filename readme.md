@@ -1,4 +1,4 @@
-H# 📖 Overview  
+# 📖 Overview  
 
 [OpenDataSoft (ODS)](https://opendatasoft.com) is an **Infrastructure-as-a-Service (IaaS)** platform widely used by the Open Data community for storing and publishing datasets. While ODS provides a **REST API** for direct data access, performance issues can arise for large datasets. In such cases, datasets need to be replicated to a more performant storage solution, either **locally** or in a **cloud database**. 
 
